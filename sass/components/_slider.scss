@@ -1,0 +1,122 @@
+.slider {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@include media-mobile {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 80px;
+		row-gap: 20px;
+		grid-template-areas: "slider slider";
+		justify-items: center;
+		button:first-child {
+			justify-self: end;
+		}
+		button:last-child {
+			justify-self: start;
+		}
+	}
+}
+
+.slider__wrapper {
+	overflow: hidden;
+	width: 990px;
+	@include media-tablet {
+		width: 580px;
+	}
+	@include media-mobile {
+		width: 270px;
+		flex-basis: 100%;
+		grid-area: slider;
+	}
+}
+
+.slider__items {
+	display: flex;
+	position: relative;
+	left: -1080px;
+	column-gap: 90px;
+	@include media-tablet {
+		column-gap: 40px;
+		left: -620px;
+	}
+	@include media-mobile {
+		left: -310px;
+	}
+}
+
+@keyframes move-right {
+  from {left: -1080px;}
+  to {left: -2160px;}
+}
+
+@keyframes move-right_tablet {
+  from {left: -620px;}
+  to {left: -1240px;}
+}
+
+@keyframes move-right_mobile {
+  from {left: -310px;}
+  to {left: -620px;}
+}
+
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 2s;
+	@include media-tablet {
+		animation-name: move-right_tablet;
+	}
+	@include media-mobile {
+		animation-name: move-right_mobile;
+	}
+}
+
+@keyframes move-left {
+  from {left: -1080px;}
+  to {left: 0;}
+}
+
+@keyframes move-left_tablet {
+  from {left: -620px;}
+  to {left: 0;}
+}
+
+@keyframes move-left_mobile {
+  from {left: -310px;}
+  to {left: 0;}
+}
+
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 2s;
+	@include media-tablet {
+		animation-name: move-left_tablet;
+	}
+	@include media-mobile {
+		animation-name: move-left_mobile;
+	}
+}
+
+.slider__items_curr,
+.slider__items_next,
+.slider__items_prev {
+	display: flex;
+	justify-content: space-between;
+	column-gap: 90px;
+	width: 990px;
+	@include media-tablet {
+		column-gap: 40px;
+		width: 630px;
+		.card:nth-child(1n + 3) {
+			display: none;
+		}
+	}
+	@include media-mobile {
+		justify-content: center;
+		width: 270px;
+		.card:nth-child(1n + 2) {
+			display: none;
+		}
+	}
+}

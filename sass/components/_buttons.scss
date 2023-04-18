@@ -1,0 +1,80 @@
+.button {
+	padding: 13px 43px;
+	font-family: $font-prim;
+	@include font(1.7rem, 130%);
+	letter-spacing: 0.06em;
+	color: $color-dark-3xl;
+	background-color: $color-primary;
+	border: 2px solid $color-primary;
+	border-radius: 100px;
+	@extend %transition;
+	cursor: pointer;
+	&_bordered {
+		background-color: transparent;
+	}
+	&:hover {
+		background-color: $color-primary-light;
+		border-color:$color-primary-light;
+	}
+}
+
+.button-round {
+	width: 52px;
+	height: 52px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: $font-prim;
+	@include font(2rem, 115%);
+	letter-spacing: 0.06em;
+	color: $color-dark-3xl;
+	background-color: transparent;
+	border: 2px solid $color-primary;
+	border-radius: 100px;
+	@extend %transition;
+	cursor: pointer;
+	&:hover {
+		background-color: $color-primary-light;
+		border-color: $color-primary-light;
+	}
+	&_active {
+		background-color: $color-primary;
+		border-color: $color-primary;
+		pointer-events: none;
+	}
+	&_inactive {
+		color: $color-dark-s;
+		border-color: $color-dark-s;
+		pointer-events: none;
+	}
+	&_arrow {
+		background-image: url(../../assets/icons/Arrow.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		&.button-round_arrow-right {
+			transform: rotate(180deg);
+		}
+	}
+	&_close {
+		background-image: url(../../assets/icons/close.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+
+.button-card {
+	padding: 10px 14px;
+	display: flex;
+	column-gap: 15px;
+	align-items: center;
+	color: $color-dark-l;
+	text-decoration: none;
+	background-color: $color-primary;
+	border: none;
+	border-radius: 9px;
+	cursor: pointer;
+	@extend %transition;
+	&:hover {
+		background-color: $color-primary-light;
+	}
+}

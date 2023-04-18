@@ -1,0 +1,22 @@
+@import "../../sass/abstracts/variables";
+@import "../../sass/abstracts/mixins";
+@import "../../sass/abstracts/placeholders";
+
+@import "../../sass/base/base";
+@import "../../sass/base/typography";
+
+@import "../../sass/components/logo";
+@import "../../sass/components/navigation";
+@import "../../sass/components/buttons";
+@import "../../sass/components/cards";
+@import "../../sass/components/slider";
+@import "../../sass/components/burger";
+@import "../../sass/components/popup";
+
+@import "../../sass/layout/header";
+@import "../../sass/layout/start-screen";
+@import "../../sass/layout/about";
+@import "../../sass/layout/pets";
+@import "../../sass/layout/help";
+@import "../../sass/layout/donation";
+@import "../../sass/layout/footer";

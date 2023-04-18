@@ -1,0 +1,31 @@
+.pagination__list {
+	margin-bottom: 59px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-column-gap: 40px;
+	grid-row-gap: 30px;
+	@include media-tablet {
+		grid-template-columns: 1fr 1fr;
+		margin-bottom: 39px;
+		.card:nth-child(1n + 7) {
+			display: none;
+		}
+	}
+	@include media-mobile {
+		grid-template-columns: 1fr;
+		margin-bottom: 42px;
+		justify-items: center;
+		.card:nth-child(1n + 4) {
+			display: none;
+		}
+	}
+}
+
+.pagination__controls {
+	display: flex;
+	justify-content: center;
+	column-gap: 20px;
+	@include media-mobile {
+		column-gap: 10px;
+	}
+}

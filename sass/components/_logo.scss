@@ -1,0 +1,24 @@
+.logo__title {
+	margin-bottom: 10px;
+	color: $color-primary;
+}
+
+.logo__subtitle {
+	padding-left: 4px;
+	font-family: $font-add;
+	@include font(1.3rem, 1.5rem);
+	letter-spacing: 0.1em;
+	color: $color-light-xl;
+}
+
+.logo {
+	text-decoration: none;
+	&_dark{
+		.logo__title {
+			color: $color-dark-l;
+		}
+		.logo__subtitle {
+			color: $color-dark-3xl;
+		}
+	}
+}
